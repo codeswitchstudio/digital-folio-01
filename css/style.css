@@ -77,12 +77,12 @@ nav ul li {
 
 /* hero banner */
 .hero-banner {
-  background-image: url("../images/02-hero-bg.jpg");
+  background-image: url("../images/maze.jpg");
   background-size: cover;
   display: inline-block;
-  height: 160px;
+  height: 165px;
   width: 100%;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 
 }
 
@@ -95,3 +95,27 @@ nav ul li {
 
 
 }
+
+/* grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+  "about about-content"
+  "work work-content"
+  "contact contact-content"
+  ;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
