@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- This meta tag instructs the browser to use actual device width when displaying on a mobile device, allowing media queries to properly render -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
   <title>Indira Endaya // Web Developer</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -39,13 +43,37 @@
     </div>
   </section>
 
- 
+
   <main>
     <section class="grid-container">
+      <!-- About -->
       <div class="grid-item" id="about">About</div>
       <div class="grid-item" id="about-content">About Content</div>
+      
+      <!-- Work -->
+      
       <div class="grid-item" id="work">Work</div>
-      <div class="grid-item" id="work-content">Work Content</div>
+
+      <div class="grid-item" id="work-content">
+        <!-- grid within grid -->     
+        <div class="work-grid">
+          <div class="artwork-01">artwork-01</div>
+          <div class="artwork-02">artwork-02</div>
+          <div class="artwork-03">artwork-03</div>
+          <div class="artwork-04">artwork-04</div>
+          <div class="artwork-05">artwork-05</div>
+        </div>
+        
+
+      
+      <!--parent closing tags  -->
+        </div>
+    </div>
+
+      </div>
+    </div>
+
+      <!-- Contact -->
       <div class="grid-item" id="contact">Contact</div>
       <div class="grid-item" id="contact-content">Contact Content</div>
     </section>

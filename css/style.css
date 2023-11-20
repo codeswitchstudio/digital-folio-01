@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+
+/* breaking point is 662px in firefox */
+
+
 :root {
   --bg-color-dark: black;
   --bg-color-light:  #08ead0;
@@ -102,7 +106,7 @@ nav ul li {
   width: 100vw;
   height: 100vw;
   grid-template-columns: 25% auto;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto 600px 10%;
   grid-template-areas: 
   "about about-content"
   "work work-content"
@@ -114,11 +118,52 @@ nav ul li {
 }
 
 .grid-item {
+  display: block;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  /* padding: 20px; */
   font-size: 30px;
   text-align: center;
 }
 
-
+.work-grid {
+  display: grid;
+  background-position: center; 
+  background-size: cover ;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  align-content:end;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "artwork-01 artwork-01 "
+    "artwork-02 artwork-03 "
+    "artwork-04 artwork-05 "
+    ;
+}
+.artwork-01 {
+  grid-area: artwork-01;
+  background-image: url("../images/02-portfolio-1.jpg");
+  min-height:200px;
+}
+.artwork-02 {
+  grid-area: artwork-02;
+  background-image: url("../images/02-portfolio-2.jpg");
+  
+}
+.artwork-03 {
+  grid-area: artwork-03;
+  background-image: url("../images/02-portfolio-3.jpg");
+  
+}
+.artwork-04 {
+  grid-area: artwork-04;
+  background-image: url("../images/02-portfolio-4.jpg");
+  
+}
+.artwork-05 {
+  grid-area: artwork-05;
+  background-image: url("../images/02-portfolio-2.jpg");
+  
+}
