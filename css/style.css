@@ -172,11 +172,30 @@ nav ul li {
 }
 
 #about-content {
-  font-size: 18px;
-  text-align: left;
-  padding: 15px, 25px, 5px, 15px;
-  align-items:first baseline;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 80% auto repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-areas: 
+    "text-box photo-box "
 }
+
+.photo-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/headshot.png");;
+
+}
+
+.text-box {
+  font-size: 16px;
+  text-align: left;
+  padding-right: 15px;
+}
+
 
 .work-grid {
   display: grid;
@@ -192,8 +211,6 @@ nav ul li {
     ;
 }
 
-
-
 .work-grid a:link {
   color: white;
   text-decoration: none;
@@ -203,8 +220,6 @@ nav ul li {
   color: white;
   text-decoration: none;
 }
-
-
 
 .artwork-01, .artwork-02, .artwork-03, .artwork-04, .artwork-05 {
   background-position: center;
@@ -278,23 +293,26 @@ nav ul li {
 
 }
 
-#contact-content ul {
+.contact-links {
   list-style-type: none;
-  justify-content: space-evenly
+  justify-content: space-evenly;
   align-items: end;
 }
-#contact-content ul li {
+
+
+.contact-links ul li {
   display: inline-flex;
-  border-bottom: 2px solid var(--bg-color-dark;   
+  margin-right: 20px;
+  border-bottom: 2px solid var(--bg-color-dark);   
 
 }
 
-#contact-content  a:link {
-  color: var(--bg-color-dark;   
+.contact-links a:link {
+  color: var(--bg-color-light);   
   text-decoration: none;
 }
 
-#contact-content a:visited {
+.contact-links a:visited {
   color: rgb(6, 6, 6);
   
 }  
