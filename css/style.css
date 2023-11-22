@@ -9,7 +9,7 @@ also make nav height bigger when too small
 
 
 :root {
-  --bg-color-dark: black;
+  --bg-color-dark: #1d1160;
   --bg-color-light:  #08ead0;
 /*      #08ead0; 
     */
@@ -200,7 +200,6 @@ nav ul li {
 .work-grid {
   display: grid;
   gap: 15px;
-  cursor: pointer;
   align-items:flex-end
   grid-template-columns: 1fr 1fr repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1fr 1fr 1fr;
@@ -212,7 +211,7 @@ nav ul li {
 }
 
 .work-grid a:link {
-  color: white;
+  color:  white;
   text-decoration: none;
 }
 
@@ -220,6 +219,12 @@ nav ul li {
   color: white;
   text-decoration: none;
 }
+
+.work-grid a:hover {
+  color:  var(--bg-color-light);
+  text-decoration: none;
+}
+
 
 .artwork-01, .artwork-02, .artwork-03, .artwork-04, .artwork-05 {
   background-position: center;
@@ -255,21 +260,23 @@ nav ul li {
 }
 
 .work-grid p {
+  cursor: pointer;
   text-align: left;
   padding: 5px;
 /*   background-color: rgba(0, 0, 0, 0.8); */
   background-color: black; 
   color: white;
   width: 190px;
-  
   margin-top: 95px;
   font-size: 16; 
+  font-weight: 600;
   /* font-size: 14;  */
 }
 
 .subtitle-text {
   display: block; 
   font-family: monospace;
+  font-weight: lighter;
   /* margin-top: 150px; */
 }
 
@@ -303,16 +310,18 @@ nav ul li {
 .contact-links ul li {
   display: inline-flex;
   margin-right: 20px;
-  border-bottom: 2px solid var(--bg-color-dark);   
+    
 
 }
 
 .contact-links a:link {
-  color: var(--bg-color-light);   
+  color: #008B8B;  
   text-decoration: none;
+  border-bottom: 2px solid #008B8B; 
 }
 
 .contact-links a:visited {
-  color: rgb(6, 6, 6);
+  color: var(--bg-color-dark);  
+  border-bottom: 2px solid var(--bg-color-dark); 
   
 }  
