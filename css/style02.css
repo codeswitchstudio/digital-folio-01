@@ -22,11 +22,6 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
-  /* background-color: black; */
-}
-
-.main {
-  /* background-color: white; */
 }
 
 h1,
@@ -50,35 +45,14 @@ header {
   /* padding: 20px; */
 }
 
-  
-@media only screen and (max-width: 600px) {
-    .main-nav {
-        font-size: 0.5em;  
-        padding: 0;
-    }
-}    
-
-
-
-
 h1 {
   display: inline-block;
-  position: absolute;
   font-size: 30px;
   color: rgb(0, 0, 0);
   background-color: var( --bg-color-light);
   padding: 0 8px 0 25px;
   margin-top: 12.5px;
 }
-
-@media (max-width: 600px) { 
-  h1 {
-  font-size: 24px; 
-}
-  
-}
-  
-
 
 header a:link {
   color: var( --bg-color-light);
@@ -98,14 +72,6 @@ nav {
   font-size: 20px;
 }
 
-
-@media (max-width: 600px) { nav {
-  font-size: 14px; }
-  }
-  
-
-
-
 nav ul {
   list-style-type: none;
 }
@@ -119,7 +85,7 @@ nav ul li {
 /* hero banner */
 .hero-banner {
   background-image: url("../images/maze.jpg");
-  background-color: black;
+  background-color: thistle;
   background-size: cover;
   display: inline-block;
   height: 165px;
@@ -166,12 +132,24 @@ nav ul li {
 .grid-item {
   display: grid;
   background-color: rgba(255, 255, 255, 0.8); 
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  /* /* padding: 20px; */
+  /* gap: 10px; */
   text-align: center;
   padding-top: 0px;
   padding-left: 15px;
   padding-right: 15px;
 
 }
+
+
+.space-left,
+.space-right {
+
+  height: 5px;
+
+}
+
 
   #about,
   #work, 
@@ -180,24 +158,18 @@ nav ul li {
   /* background-color: lightYellow;   */
   padding-right: 4px;
   padding-bottom: 3px;
+  padding-top: 5px;
+
+
 } 
 
 .grid-item h3 {
-  font-size: 24px;
+  font-size: 25px;
   text-align: right;
   padding-right: 5px;
-  align-items:first baseline;
+  align-items:flex-start;
 
 }
-
-@media (max-width: 600px) { 
-  .grid-item h3  {
-  font-size: 18px; }
-  }
-  
-
-
-
 
 #about-content {
   padding: 15px;
@@ -206,8 +178,6 @@ nav ul li {
   grid-template-areas: 
     "text-box photo-box "
 }
-
-
 
 .photo-box {
   width: 150px;
@@ -230,7 +200,7 @@ nav ul li {
 .work-grid {
   display: grid;
   gap: 15px;
-  /* align-items:flex-end */
+  align-items:flex-end
   grid-template-columns: 1fr 1fr repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
@@ -255,18 +225,25 @@ nav ul li {
   text-decoration: none;
 }
 
+.image-holder {
+  max-width: 910;
+  max-height: 234;
+}
 
 .artwork-01, .artwork-02, .artwork-03, .artwork-04, .artwork-05 {
-  background-position: center;
+  /* background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .artwork-01 {
   grid-area: artwork-01;
-  background-image: url("../images/SEO.png");
+  /* background-image: url("../images/SEO.png"); */
+  background-color: silver;
   min-height:200px;
+  align-items: self-end;
 }
+
 .artwork-02 {
   grid-area: artwork-02;
   background-image: url("../images/Pep.png");
@@ -332,14 +309,14 @@ nav ul li {
 
 .contact-links {
   list-style-type: none;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: end;
 }
 
 
 .contact-links ul li {
   display: inline-flex;
-  margin-right: 10px;
+  margin-right: 20px;
     
 
 }
